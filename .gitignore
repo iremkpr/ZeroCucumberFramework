@@ -36,3 +36,10 @@ bin/
 
 # Ignore MacOS specific files
 .DS_Store
+
+# Ignore Maven configuration file (if you don't want to track it)
+pom.xml
+
+# Ignore source directory (if you don't want to track it)
+src/
+
