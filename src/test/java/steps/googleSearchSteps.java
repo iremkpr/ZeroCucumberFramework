@@ -24,12 +24,12 @@ public class googleSearchSteps extends CommonMethods {
 		setUp();
  	}
 
-	@Given("Send text on Search Box")
+	@When("Send text on Search Box")
 	public void send_text_on_search_box() {
  		    google.searchbox.sendKeys("trial");
 	}
 
-	@When("Click search button")
+	@And("Click search button")
 	public void click_search_button() {
  		google.searchbox.sendKeys(Keys.ENTER);      
 	}
@@ -50,11 +50,10 @@ public class googleSearchSteps extends CommonMethods {
 
 	@Then("Verify result numbers")
 	public void verify_result_numbers() {
-		System.out.println(google.links.size());
+ 		System.out.println(google.links.size()+" links are exist on google search results ");
 
-		if(google.links.size()==14) {
-			System.out.println("14 links are exist on google search results ");
-		}
+		 
+		driver.quit();
 	}
 
 }

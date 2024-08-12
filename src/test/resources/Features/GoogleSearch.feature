@@ -6,7 +6,7 @@ Feature: Google Search Feature
 
   @tag1
   Scenario: Google Search on Chrome Browser
-    Given Send text on Search Box
-    When Click search button
+    When Send text on Search Box
+    And Click search button
     And Count line of listed results
     Then Verify result numbers
