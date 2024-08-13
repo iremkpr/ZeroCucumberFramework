@@ -13,7 +13,7 @@ public class BaseClass {
 
 	public static WebDriver driver;
   
- 
+	
  	public static void setUp() throws InterruptedException {
 		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Constants.IMPLICIT_WAIT_TIME));
 		

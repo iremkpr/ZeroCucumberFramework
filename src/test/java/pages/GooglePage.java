@@ -20,8 +20,7 @@ public class GooglePage extends CommonMethods{
 	@FindBy(xpath="//h3[@class='LC20lb MBeuO DKV0Md']")
 	public List<WebElement> links;
 	
-	
-	
+ 	
 	 public GooglePage() {
 		 PageFactory.initElements(driver,this);
 	 }
