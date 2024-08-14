@@ -14,21 +14,14 @@ public class PageInitializer extends BaseClass{
 	public static DashboardPage dashboard;
 	public static EmployeeListPage empListPage;
 	public static AddEmployeePage addEmp;
-<<<<<<< Updated upstream
 	public static PersonalDetailsPage personalDetails;
-=======
-	
->>>>>>> Stashed changes
-	
+ 	
 	public static void initialize() {
 		google=new GooglePage();
 		login=new loginPage();
 		dashboard=new DashboardPage();
 		empListPage=new EmployeeListPage();
 		addEmp=new AddEmployeePage();
-<<<<<<< Updated upstream
-		personalDetails=new PersonalDetailsPage();
-=======
->>>>>>> Stashed changes
-	}
+ 		personalDetails=new PersonalDetailsPage();
+ 	}
  }
