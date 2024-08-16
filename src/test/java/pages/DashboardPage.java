@@ -8,6 +8,9 @@ import utils.CommonMethods;
 
 public class DashboardPage extends CommonMethods {
 
+	@FindBy(id="account-name")
+	public WebElement accountName;
+	
 	@FindBy(xpath = "//li[@id='menu_pim_viewPimModule']/a//span[2]")
 	public WebElement pim;
 
