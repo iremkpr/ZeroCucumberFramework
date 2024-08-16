@@ -11,7 +11,7 @@ import io.cucumber.junit.Cucumber;
 
 		features="src/test/resources/Features",
 		glue="steps",
-		dryRun= true,
+		dryRun= false,
 		tags="@smokeAda",
 		monochrome=true
 		)

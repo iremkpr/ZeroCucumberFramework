@@ -23,12 +23,10 @@
 hs_err_pid*
 replay_pid*
 
-# Maven target directory
-/target/
 
-# Ignore Eclipse specific files
-.classpath
 .project
 .settings/
 
 
+/bin/
+/target/
