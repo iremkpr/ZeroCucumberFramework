@@ -34,7 +34,3 @@ replay_pid*
 
 # Ignore MacOS specific files
 .DS_Store
-
-
-
-/bin/
