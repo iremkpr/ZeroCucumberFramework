@@ -12,7 +12,7 @@ import io.cucumber.junit.Cucumber;
 		features="src/test/resources/Features",
 		glue="steps",
 		dryRun= false,
-		tags="@smokeAda",
+		tags="@smoke1 or @smoke2",
 		monochrome=true
 		)
 	
