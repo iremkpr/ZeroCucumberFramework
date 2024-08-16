@@ -32,6 +32,3 @@ replay_pid*
 .settings/
 
 
-# Ignore MacOS specific files
-.DS_Store
-/bin/
