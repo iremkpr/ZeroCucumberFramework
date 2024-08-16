@@ -281,5 +281,6 @@ public class CommonMethods extends PageInitializer{
 
 		return sdf.format(date);
 	}
+ 
 }
 
