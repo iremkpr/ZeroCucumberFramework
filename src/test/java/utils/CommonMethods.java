@@ -281,6 +281,50 @@ public class CommonMethods extends PageInitializer{
 
 		return sdf.format(date);
 	}
- 
+	
+	
+	//-----------------------------------------------------------------------------------------------------------------
+	//--------------------i added you can delete later (but there is used on on couple steps----------------------------
+	//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	public void selectDropDown(WebElement icon, List<WebElement> list, String select) {
+		icon.click();
+		for (WebElement e : list) {
+			if (e.getText().equals(select)) {
+				e.click();
+				break;
+			}
+		}
+	}
+
+	public void datePicker(String date, WebElement openIcon, WebElement monthOpenIcon, List<WebElement> months,
+			List<WebElement> days, WebElement yearOpenIcon, List<WebElement> years) {
+
+		String[] dates = date.split("\\.");
+		System.out.println(dates);
+		int month = Integer.parseInt(dates[0]);
+		String day = dates[1];
+		String year = dates[2];
+		openIcon.click();
+		// month select
+		monthOpenIcon.click();
+
+		WebElement monthByIndex = months.get(month - 1);
+		monthByIndex.click();
+
+		yearOpenIcon.click();
+		for (WebElement y : years) {
+			if (y.getText().equals(year)) {
+				y.click();
+				break;
+			}
+		}
+		for (WebElement d : days) {
+			if (d.getText().equals(day)) {
+				d.click();
+				break;
+			}
+		}
+
+	}
 }
 
