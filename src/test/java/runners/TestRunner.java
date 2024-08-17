@@ -12,7 +12,7 @@ import io.cucumber.junit.Cucumber;
 		features="src/test/resources/Features",
 		glue="steps",
 		dryRun= true,
-		tags="@dashboardMenu",
+		tags="@detailsModify",
 		monochrome=true
 		)
 	
