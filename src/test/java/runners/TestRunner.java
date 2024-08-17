@@ -11,8 +11,8 @@ import io.cucumber.junit.Cucumber;
 
 		features="src/test/resources/Features",
 		glue="steps",
-		dryRun= false,
-		tags="@smoke1 or @smoke2",
+		dryRun= true,
+		tags="@dashboardMenu",
 		monochrome=true
 		)
 	

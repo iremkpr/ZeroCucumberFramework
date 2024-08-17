@@ -1,10 +1,12 @@
 package pages;
 
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import utils.CommonMethods;
+ import utils.CommonMethods;
 
 public class DashboardPage extends CommonMethods {
 
@@ -19,10 +21,9 @@ public class DashboardPage extends CommonMethods {
 	
 	@FindBy(xpath = "//a[@id='menu_pim_addEmployee']/span[2]")
 	public WebElement addEmp;
-/*
-	@FindBy(xpath = "//span[@combinedmenutitle='PIM > Employee List']")
-	public WebElement empList
-*/
+
+	@FindBy(xpath = "//li[contains(@class,'l1')]/a/span[2]")
+	public List<WebElement> menuItems;
 	public DashboardPage() {
 		PageFactory.initElements(driver, this);
 	}
