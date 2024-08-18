@@ -18,25 +18,25 @@ public class PersonalDetailsPage extends CommonMethods {
 	@FindBy(xpath = "//div[@class='form-group schema-form-submit right']/button")
 	public WebElement firstSaveButton;
 
-	@FindBy(xpath = "//materializecss-decorator[@form='schemaForm.form[2]']//i[@class='material-icons action-icon date-picker-open-icon']")
+	@FindBy(xpath = "//input[@id='emp_birthday']/..//i")
 	public WebElement birthDateIcon;
 
-	@FindBy(xpath = "//materializecss-decorator[@form='schemaForm.form[2]']//div[@class='select-wrapper picker__select--month']/input")
+	@FindBy(xpath = "//input[@id='emp_birthday']/..//div[@class='select-wrapper picker__select--month']/input")
 	public WebElement birthMonthOpenIcon;
 
-	@FindBy(xpath = "//materializecss-decorator[@form='schemaForm.form[2]']//div[@class='select-wrapper picker__select--month']//li/span")
+	@FindBy(xpath = "//input[@id='emp_birthday']/..//div[@class='select-wrapper picker__select--month']//li")
 	public List<WebElement> birthMonths;
 
-	@FindBy(xpath = "//materializecss-decorator[@form='schemaForm.form[2]']//table//tr/td/div[@class='picker__day picker__day--infocus']")
+	@FindBy(xpath = "//input[@id='emp_birthday']/..//td/div[@class='picker__day picker__day--infocus']")
 	public List<WebElement> birthDays;
 
-	@FindBy(xpath = "//materializecss-decorator[@form='schemaForm.form[2]']//div[@class='select-wrapper picker__select--year']/input")
+	@FindBy(xpath = "//input[@id='emp_birthday']/..//div[@class='select-wrapper picker__select--year']/input")
 	public WebElement birthYearOpenIcon;
 
-	@FindBy(xpath = "//materializecss-decorator[@form='schemaForm.form[2]']//div[@class='select-wrapper picker__select--year']//ul/li/span")
+	@FindBy(xpath = "//input[@id='emp_birthday']/..//div[@class='select-wrapper picker__select--year']//ul/li")
 	public List<WebElement> birthYears;
 
-	@FindBy(xpath = "//input[@value='Married']")
+	@FindBy(xpath = "//div[@id='emp_marital_status_inputfileddiv']//input")
 	public WebElement maritalStatusIcon;
 
 	@FindBy(xpath = "//input[@value='Married']/..//ul/li/span")
@@ -57,18 +57,19 @@ public class PersonalDetailsPage extends CommonMethods {
 	@FindBy(xpath = "//label[@for='emp_dri_lice_exp_date']/..//i")
 	public WebElement licenceDateIcon;
 
-	@FindBy(xpath = "//materializecss-decorator[@form='schemaForm.form[3]']//div[@class='select-wrapper picker__select--month']/input")
+	@FindBy(xpath = "//input[@id='emp_dri_lice_exp_date']/..//div[@class='select-wrapper picker__select--month']/input")
 	public WebElement licMonthOpenIcon;
 
-	@FindBy(xpath = "//materializecss-decorator[@form='schemaForm.form[3]']//div[@class='select-wrapper picker__select--month']//li/span")
+	@FindBy(xpath = "//input[@id='emp_dri_lice_exp_date']/..//div[@class='select-wrapper picker__select--month']//li/span")
 	public List<WebElement> licMonths;
 
-	@FindBy(xpath = "//materializecss-decorator[@form='schemaForm.form[3]']//div[@class='select-wrapper picker__select--year']/input")
+	@FindBy(xpath = "//input[@id='emp_dri_lice_exp_date']/..//div[@class='select-wrapper picker__select--year']/input")
 	public WebElement licYearOpenIcon;
 
-	@FindBy(xpath = "//materializecss-decorator[@form='schemaForm.form[3]']//div[@class='select-wrapper picker__select--year']//ul/li/span")
+	@FindBy(xpath = "//input[@id='emp_dri_lice_exp_date']/..//div[@class='select-wrapper picker__select--year']//li/span")
 	public List<WebElement> licYears;
-	@FindBy(xpath = "//materializecss-decorator[@form='schemaForm.form[3]']//table//tr/td/div[@class='picker__day picker__day--infocus']")
+	
+	@FindBy(xpath = "//input[@id='emp_dri_lice_exp_date']/..//table//td/div[@class='picker__day picker__day--infocus']")
 	public List<WebElement> licDays;
 
 	@FindBy(xpath = "//label[@for='smoker']")

@@ -9,11 +9,22 @@ import io.cucumber.junit.Cucumber;
  	
 @CucumberOptions(
 
-		features="src/test/resources/Features",
-		glue="steps",
-		dryRun= true,
+		features="src/test/resources/Features/",
+		glue="steps", 
+		dryRun= false,
 		tags="@detailsModify",
-		monochrome=true
+		monochrome=true,
+		plugin = {
+				// Prints the gherkin steps to the console
+				"pretty",
+				
+				// Creates and saves the basic html report on the target folder
+				"html:target/cucumber-default-report.html",
+				
+				// Stores every step of the execution to a json file
+				"json:target/cucumber.json",
+				"rerun:target/failed.txt"				
+				}
 		)
 	
 public class TestRunner {
