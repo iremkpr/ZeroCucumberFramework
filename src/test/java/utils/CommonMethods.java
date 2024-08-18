@@ -21,9 +21,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.google.common.io.Files;
  
- import TestBase.PageInitializer;
+import TestBase.PageInitializer;
 
 public class CommonMethods extends PageInitializer{
 	 
@@ -247,21 +246,20 @@ public class CommonMethods extends PageInitializer{
 			}
 		}
 	}
-	public static void screenshot() throws IOException {
-		TakesScreenshot ts=(TakesScreenshot) driver; // ITS KINDA YOUR CAMERA
-		//You took a screenshot but didnt save anywhere
+	public static String getTimeStamp() {
+		Date date = new Date();
 
-		/**
-		 * SAVE YOUR SCREENSHOT 
-		 */
-		File sourceFile=ts.getScreenshotAs(OutputType.FILE);
-		Files.copy(sourceFile, new File("screenshots/HRM/screenshot02.png"));
-		
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");
+
+		return sdf.format(date);
 	}
-	public static String takeScreenshot(String fileName) {
+	public static byte[] takeScreenshot(String fileName) {
 
 		TakesScreenshot ts = (TakesScreenshot) driver;
 
+		// If you don't want the screenshot to be saved, you can comment this part
+		////////////////////////////////
+		// Create a file and store it in our computer
 		File sourceFile = ts.getScreenshotAs(OutputType.FILE);
 
 		String destination = Constants.SCREENSHOT_FILEPATH + fileName + getTimeStamp() + ".png";
@@ -271,15 +269,11 @@ public class CommonMethods extends PageInitializer{
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
-		return destination;
-	}
-	public static String getTimeStamp() {
-		Date date = new Date();
+		////////////////////////////////
 
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");
-
-		return sdf.format(date);
+		// Create a byte[] and return it to be attached to the report
+		byte[] picBytes = ts.getScreenshotAs(OutputType.BYTES);
+		return picBytes;
 	}
 	
 	

@@ -63,6 +63,7 @@ public class ModifyEmployeeDetails extends CommonMethods {
 		wait.until(ExpectedConditions.visibilityOf(empListPage.searchBox));
 		empListPage.searchBox.sendKeys(user);
 		empListPage.searchButton.click();
+		Thread.sleep(6000);
 		wait.until(ExpectedConditions.elementToBeClickable(empListPage.emplName));
 		empListPage.emplName.click();
 		Thread.sleep(7000);
