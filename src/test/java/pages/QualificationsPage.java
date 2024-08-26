@@ -33,6 +33,8 @@ public class QualificationsPage extends CommonMethods {
 	@FindBy(xpath = "//table[@class='highlight bordered']//tr//td[2]//span")
 	public List<WebElement> addedNames;
 
+	@FindBy(xpath="//div[@class='modal modal-fixed-footer open']//a[@form-name='licensesModalForm']")
+	public WebElement licenceSave;
 	public QualificationsPage() {
 		PageFactory.initElements(driver, this);
 	}

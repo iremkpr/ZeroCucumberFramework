@@ -65,8 +65,14 @@ public class QualificationFeature extends CommonMethods {
 	@Then("Click the educationsave button")
 	public void click_the_edusave_button() {
 		// Write code here that turns the phrase above into concrete actions
-		qualification.educationSave.click();
+ 		qualification.educationSave.click();
 		getWaitObject().until(ExpectedConditions.visibilityOfAllElements(qualification.addedNames));
+	}
+ 	@Then("Click the licence button")
+	public void click_the_licenceSave_button() {
+		// Write code here that turns the phrase above into concrete actions
+ 		qualification.licenceSave.click();
+ 		getWaitObject().until(ExpectedConditions.visibilityOfAllElements(qualification.addedNames));
 	}
 	@Then("Validate is the {string} added")
 	public void validate_is_the_skill_added(String name) throws InterruptedException {
@@ -89,7 +95,7 @@ public class QualificationFeature extends CommonMethods {
 	public void fill_the_valid(String name) {
 	    // Write code here that turns the phrase above into concrete actions
 		qualification.name.sendKeys(name);
-
+	//	getWaitObject().until(ExpectedConditions.elementToBeClickable(qualification.educationSave));
 	}
 
 	public void selectionFromList(List<WebElement> list, String clickTo) {

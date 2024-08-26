@@ -17,10 +17,10 @@ Feature: Qualifications feature
 
     Examples: 
       | qualification | name                   | Description                |
-      | Skills        | 3. Skill Qualification | The 3. Skill Qualification |
+      | Skills        | 4. Skill Qualification | The 4. Skill Qualification |
 
   @education
-  Scenario Outline: Admin should be able to add Skill Qualification
+  Scenario Outline: Admin should be able to add Education Qualification
     Given Click to the specific qualification button "<qualification>"
     And Click to the add icon
     Then Fill the valid "<name>"
@@ -29,4 +29,16 @@ Feature: Qualifications feature
 
     Examples: 
       | qualification | name                           |
-      | Education     | Second Education Qualification |
+      | Education     | 4th Education Qualification |
+
+  @Licenses
+  Scenario Outline: Admin should be able to add Licenses Qualification
+    Given Click to the specific qualification button "<qualification>"
+    And Click to the add icon
+    Then Fill the valid "<LevelEducation>"
+    And Click the licence button
+    Then Validate is the "<LevelEducation>" added
+
+    Examples: 
+      | qualification | LevelEducation        |
+      | Licenses      | Second License Qualification |
