@@ -5,6 +5,7 @@ import pages.DashboardPage;
 import pages.EmployeeListPage;
 import pages.GooglePage;
 import pages.PersonalDetailsPage;
+import pages.QualificationsPage;
 import pages.loginPage;
 
 public class PageInitializer extends BaseClass{
@@ -15,6 +16,7 @@ public class PageInitializer extends BaseClass{
 	public static EmployeeListPage empListPage;
 	public static AddEmployeePage addEmp;
 	public static PersonalDetailsPage personalDetails;
+	public static QualificationsPage qualification;
  	
 	public static void initialize() {
 		google=new GooglePage();
@@ -23,5 +25,6 @@ public class PageInitializer extends BaseClass{
 		empListPage=new EmployeeListPage();
 		addEmp=new AddEmployeePage();
  		personalDetails=new PersonalDetailsPage();
+ 		qualification=new QualificationsPage();
  	}
  }

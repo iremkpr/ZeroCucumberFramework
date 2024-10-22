@@ -19,9 +19,19 @@ public class DashboardPage extends CommonMethods {
 	@FindBy(xpath = "//a[@id='menu_pim_viewEmployeeList']/span[2]")
 	public WebElement emplist;
 	
+	@FindBy(xpath="//li[@id='menu_admin_viewAdminModule']/a/span[2]")
+	public WebElement admin;
+	
+	@FindBy(xpath = "//li[@id='menu_admin_Qualifications']/a/span[2]")
+	public WebElement qualificationButton;
+	
+	@FindBy(xpath = "//li[@id='menu_admin_Qualifications']//li[@class='level3']//span[2]")
+	public List<WebElement> qualifications;
+	
 	@FindBy(xpath = "//a[@id='menu_pim_addEmployee']/span[2]")
 	public WebElement addEmp;
-
+	
+	 
 	@FindBy(xpath = "//li[contains(@class,'l1')]/a/span[2]")
 	public List<WebElement> menuItems;
 	public DashboardPage() {
