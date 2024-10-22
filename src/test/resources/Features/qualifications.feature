@@ -28,7 +28,7 @@ Feature: Qualifications feature
     Then Validate is the "<name>" added
 
     Examples: 
-      | qualification | name                           |
+      | qualification | name                        |
       | Education     | 4th Education Qualification |
 
   @Licenses
@@ -40,5 +40,5 @@ Feature: Qualifications feature
     Then Validate is the "<LevelEducation>" added
 
     Examples: 
-      | qualification | LevelEducation        |
+      | qualification | LevelEducation               |
       | Licenses      | Second License Qualification |

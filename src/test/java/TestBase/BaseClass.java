@@ -21,8 +21,7 @@ public class BaseClass {
 
  		
 		String browser = ConfigReader.getProperty("browser");
-		// System.out.println(browser);
-
+ 
 		switch (browser.toLowerCase()) {
 		case "chrome":
 			WebDriverManager.chromedriver().setup();

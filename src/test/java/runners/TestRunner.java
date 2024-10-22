@@ -11,8 +11,8 @@ import io.cucumber.junit.Cucumber;
 
 		features="src/test/resources/Features/",
 		glue="steps", 
-		dryRun= false,
-		tags="@Licenses",
+		dryRun= true,
+		tags="@signUp",
 		monochrome=true,
 		plugin = {
 				// Prints the gherkin steps to the console
